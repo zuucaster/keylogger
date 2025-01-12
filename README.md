@@ -9,8 +9,10 @@ This project is a Python-based keylogger designed to demonstrate how keystrokes 
 1. Install the required library:  
    ```bash
    pip install pynput
-# Run the script:
+## Run the script:
+ ```bash
 
 python keylogger.py
+```
 
 Keystrokes will be logged to the keylog.txt file in the same directory.
